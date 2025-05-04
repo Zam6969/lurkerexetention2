@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fansly Stream Checker</title>
+  <style>
+    body {
+      background-color: #121212;
+      width: 300px;
+      height: 130px;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 10px;
+    }
+
+    input[type="text"] {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-right: 10px;
+      width: 250px;
+      margin-bottom: 10px; /* Added space between textbox and button */
+    }
+
+    button {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #333333;
+    }
+
+    .divider {
+      width: 50%;
+      border-top: 1px solid #ffffff;
+      margin: 20px auto 10px auto;
+    }
+
+    ul#favoritesList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    ul#favoritesList li {
+      background-color: #1e1e1e;
+      border: 1px solid #ffffff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    ul#favoritesList li button.delete {
+      background-color: transparent;
+      color: #ff4d4d;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .footer-text {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 10px;
+      font-weight: bold;
+      background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 5s linear infinite;
+    }
+
+    @keyframes rainbow {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Fansly Favorites</h2>
+  <input type="text" id="usernameInput" placeholder="Enter Fansly username">
+  <button id="addBtn">Add Streamer</button>
+
+  <div class="divider"></div>
+
+  <ul id="favoritesList"></ul>
+
+  <div class="footer-text">Made by cutezam</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

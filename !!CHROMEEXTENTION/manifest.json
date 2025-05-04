@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Fansly Stream Lurker",
+  "version": "1.0",
+  "permissions": [
+    "cookies",
+    "activeTab",
+    "storage",
+    "notifications",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://apiv3.fansly.com/*"],
+      "js": ["popup.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
